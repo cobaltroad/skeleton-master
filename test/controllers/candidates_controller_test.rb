@@ -31,7 +31,7 @@ class CandidatesControllerTest < ActionDispatch::IntegrationTest
     a = c.answers.first
     get candidate_answer_ratings_url(
       candidate_id: c.id,
-      id: a.id
+      answer_id: a.id
     )
 
     assert_response :success
