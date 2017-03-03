@@ -37,4 +37,14 @@ class CandidatesControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+  test "average value of the ratings can be viewed" do
+    c = candidates(:barney_rubble)
+    a = c.answers.first
+    get average_rating_for_candidate_answer_url(
+      candidate_id: c.id,
+      id: a.id
+    )
+
+    assert_response :success
+  end
 end
