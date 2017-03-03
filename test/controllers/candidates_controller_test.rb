@@ -6,4 +6,10 @@ class CandidatesControllerTest < ActionDispatch::IntegrationTest
     get candidates_url
     assert_response :success
   end
+
+  test "should get individual andidates" do
+    c = candidates(:barney_rubble)
+    get candidate_url(c.id)
+    assert_response :success
+  end
 end
