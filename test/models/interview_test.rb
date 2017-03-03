@@ -18,7 +18,7 @@ class InterviewTest < ActiveSupport::TestCase
 
   test "interview questions should be in order" do
     i = interviews(:first_driver_interview)
-    assert_equal i.interview_questions.first.display_order, 1
+    assert_equal 1, i.interview_questions.first.display_order
   end
 
 end
