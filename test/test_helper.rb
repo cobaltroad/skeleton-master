@@ -19,4 +19,13 @@ class ActiveSupport::TestCase
       end
     end
   end
+
+  def create_ratings(answer, hash)
+    hash.each do |role, rating|
+      answer.answer_ratings.create(
+        interviewer: interviewers(role),
+        rating: rating
+      )
+    end
+  end
 end
