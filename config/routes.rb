@@ -7,5 +7,7 @@ Rails.application.routes.draw do
       resources :ratings, controller: "candidates/answer_ratings"
     end
   end
+
+  resources :interviewers
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
