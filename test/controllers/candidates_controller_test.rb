@@ -12,4 +12,10 @@ class CandidatesControllerTest < ActionDispatch::IntegrationTest
     get candidate_url(c.id)
     assert_response :success
   end
+
+  test "individual candidates have multiple answers" do
+    c = candidates(:barney_rubble)
+    get candidate_answers_url
+    assert_response :success
+  end
 end
