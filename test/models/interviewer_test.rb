@@ -1,7 +1,9 @@
 require 'test_helper'
 
 class InterviewerTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+
+  test "interviewer has many interviews" do
+    i = interviewers(:fleet_manager)
+    assert i.interviews.any?
+  end
 end
