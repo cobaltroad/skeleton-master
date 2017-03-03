@@ -11,4 +11,14 @@ class InterviewerPresenterTest < ActiveSupport::TestCase
     p = presenter(:fleet_manager)
     assert_not_nil p
   end
+
+  test "presenter shows the name key" do
+    p = presenter(:fleet_manager)
+    assert_includes p.keys, :name
+  end
+
+  test "presenter shows the upcoming interviews key" do
+    p = presenter(:fleet_manager)
+    assert_includes p.keys, :upcoming_interviews
+  end
 end

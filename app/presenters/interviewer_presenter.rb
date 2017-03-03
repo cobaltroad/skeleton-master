@@ -7,7 +7,8 @@ class InterviewerPresenter
   def present!
     return if @interviewer.blank?
     {
-      name: @interviewer.name
+      name: @interviewer.name,
+      upcoming_interviews: @interviews
     }
   end
 end
